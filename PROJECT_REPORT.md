@@ -111,21 +111,3 @@ The program was tested against all 4 mandated test cases from the university pro
     Item 'Pen' deleted. Items left: 1
     ```
 - **Status:** PASS
-
----
-
-## 5. Viva / Presentation Preparation Guide
-
-Common questions professors ask 1st-year students during viva and how to answer them:
-
-1. **Q: Why did you choose a list of dictionaries?**  
-   *A:* A dictionary represents a single item naturally using key-value pairs (`id`, `name`, `quantity`, `price`). A list is an ordered collection that allows us to easily append new items, iterate through them, update records, and delete items using index or `del`.
-
-2. **Q: How does the unique ID generation work?**  
-   *A:* We maintain a counter `next_item_id = 101`. Whenever `add_item()` is called, it prefixes `"I"` to the counter (`"I101"`), and increments the counter by 1 (`102`, `103`, etc.).
-
-3. **Q: How do you handle invalid inputs such as negative quantity or letters?**  
-   *A:* We use `try...except ValueError` blocks to catch non-numeric inputs and `if quantity < 0:` checks to ensure values are non-negative.
-
-4. **Q: What is the criteria for low stock?**  
-   *A:* Any item whose quantity is strictly less than 5 (`quantity < 5`).
